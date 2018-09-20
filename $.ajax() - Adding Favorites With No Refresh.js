@@ -67,5 +67,5 @@ $(document).on("click","#removeFav",function (e) {
         customerFacade.addProductToWishlist(code);
         return REDIRECT_PREFIX + referrer;
     }
-    
-  //AND POPULATORS MUST BE EXIST OF COURSE TO USE DATA AGAIN
+  // THE KEY POINT IS "AJAX MUST SEND URL WHAT THE CONTROLLER WANTS"
+  // AND POPULATORS MUST BE EXIST OF COURSE TO USE DATA AGAIN
