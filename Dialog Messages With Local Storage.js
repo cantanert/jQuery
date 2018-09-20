@@ -32,8 +32,8 @@
 
 
 
-// Çeşitli sayfalardaki favorilere ekleme ve çıkarma işlemi yapan butonların idleri ve classları dolar ile seçtik. Bu butonlara tıklandığında, 
-// local storage'a eventleri ve bool değerlerini set ettik. 
+// Çeşitli sayfalardaki favorilere ekleme ve çıkarma işlemi yapan butonların idleri ve classları dolar ile seçtik. 
+// Bu butonlara tıklandığında, local storage'a eventleri ve bool değerlerini set ettik. 
 
 
 
