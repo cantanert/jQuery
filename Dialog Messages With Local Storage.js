@@ -1,7 +1,7 @@
 
 Örnek olarak bir gönderinin/ürünün/makalenin favorilere eklenmesi işlemini ele alalım. Favorilere eklendiğinde başka 
 bir linke post işlemi olduğunu ve ajax kullanılmadığını farz edelim, işlem gerçekleşince sayfa yenilenmesi söz konusu. 
-Bu yüzden "favorilere eklendi" veya "favorilerden çıkarıldı" gibi bir dialog message'ı buton tıklandığında event verirsek,
+Bu yüzden "favorilere eklendi" veya "favorilerden çıkarıldı" gibi bir dialog message ı buton tıklandığında event verirsek,
 işlem gerçekleştikten hemen sonra sayfa yenilendiğinden görülemez. Bu yüzden favorilere ekle butonuna basıldığında ve 
 işlem tamamlanıp, sayfa yenilendiğinde message basılmalı. onun için localstorage kullanırız;
 
