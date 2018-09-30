@@ -1,8 +1,11 @@
 
+```Javascript
 $(document).on("click","#addFav",function (e) {
     var productCode = $(this).attr("data-productcode");
-    //This data comes from controller and we put it in button's "data-productcode" attribute which is created by me 
-    
+```    
+This data comes from controller and we put it in button's "data-productcode" attribute which is created by me 
+
+```Javascript    
     $.ajax({
         url: '/profile/favorites/add/' + productCode,
         type: 'POST',
@@ -54,9 +57,9 @@ $(document).on("click","#removeFav",function (e) {
         }
     });
 });
-
-//Controller Example (INSIDE OF /profile CONTROLLER)
-
+```
+Controller Example (INSIDE OF /profile CONTROLLER)
+```Java
 @RequestMapping(value = "/add/{productCode}", method = RequestMethod.POST)
     @RequireHardLogIn
     @ResponseBody
@@ -67,5 +70,7 @@ $(document).on("click","#removeFav",function (e) {
         customerFacade.addProductToWishlist(code);
         return REDIRECT_PREFIX + referrer;
     }
-  // THE KEY POINT IS "AJAX MUST SEND URL WHAT THE CONTROLLER WANTS"
-  // AND POPULATORS MUST BE EXIST OF COURSE TO USE DATA AGAIN
+```
+  
+*** THE KEY POINT IS "AJAX MUST SEND URL WHAT THE CONTROLLER WANTS"
+*** AND POPULATORS MUST BE EXIST OF COURSE TO USE DATA AGAIN
