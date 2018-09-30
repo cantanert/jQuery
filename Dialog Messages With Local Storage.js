@@ -1,11 +1,11 @@
 
-// Örnek olarak bir gönderinin/ürünün/makalenin favorilere eklenmesi işlemini ele alalım. Favorilere eklendiğinde başka 
-// bir linke post işlemi olduğunu ve ajax kullanılmadığını farz edelim, işlem gerçekleşince sayfa yenilenmesi söz konusu. 
-// Bu yüzden "favorilere eklendi" veya "favorilerden çıkarıldı" gibi bir dialog message'ı buton tıklandığında event verirsek,
-// işlem gerçekleştikten hemen sonra sayfa yenilendiğinden görülemez. Bu yüzden favorilere ekle butonuna basıldığında ve 
-// işlem tamamlanıp, sayfa yenilendiğinde message basılmalı. onun için localstorage kullanırız;
+Örnek olarak bir gönderinin/ürünün/makalenin favorilere eklenmesi işlemini ele alalım. Favorilere eklendiğinde başka 
+bir linke post işlemi olduğunu ve ajax kullanılmadığını farz edelim, işlem gerçekleşince sayfa yenilenmesi söz konusu. 
+Bu yüzden "favorilere eklendi" veya "favorilerden çıkarıldı" gibi bir dialog message'ı buton tıklandığında event verirsek,
+işlem gerçekleştikten hemen sonra sayfa yenilendiğinden görülemez. Bu yüzden favorilere ekle butonuna basıldığında ve 
+işlem tamamlanıp, sayfa yenilendiğinde message basılmalı. onun için localstorage kullanırız;
 
-
+```Javascript
                       if ($('.RemoveFavIcon').length > 0) {
                           $('.RemoveFavIcon').click(function(e) {
                               localStorage.setItem("eDelete","true");
@@ -29,14 +29,12 @@
                               localStorage.setItem("eAdd","true");
                           });
                       }
+```
 
+Çeşitli sayfalardaki favorilere ekleme ve çıkarma işlemi yapan butonların idleri ve classları dolar ile seçtik. 
+Bu butonlara tıklandığında, local storage a eventleri ve bool değerlerini set ettik. 
 
-
-// Çeşitli sayfalardaki favorilere ekleme ve çıkarma işlemi yapan butonların idleri ve classları dolar ile seçtik. 
-// Bu butonlara tıklandığında, local storage'a eventleri ve bool değerlerini set ettik. 
-
-
-
+```Javascript
                       $(document).on("ready",function () {
                           var eControl = localStorage.getItem("eDelete");
                           var eAddition = localStorage.getItem("eAdd");
@@ -66,11 +64,11 @@
                           localStorage.removeItem("eDelete");
                       }
 
+```
 
-
-// buton görevini yapıp gerekli yere post ettikten ve işlemi gerçekleştikten sonr asayfa yenilendiği anda, 
-// localstorage'dan bu bool değerleri okuyup, ona göre mesajı yazdıran, 3000 ms sonra slideUp() ile kaybolan,
-// ve işlem bittikten sonra, localstorage'dan silen kod. Local storage'dan silmemizin sebebi, alakalı-alakasız
-// bütün sayfalarda bu değerleri kontrol edebilecek olmasıdır bu js kodunun. 
+buton görevini yapıp gerekli yere post ettikten ve işlemi gerçekleştikten sonr asayfa yenilendiği anda, 
+localstorage dan bu bool değerleri okuyup, ona göre mesajı yazdıran, 3000 ms sonra slideUp() ile kaybolan,
+ve işlem bittikten sonra, localstorage dan silen kod. Local storage dan silmemizin sebebi, alakalı-alakasız
+bütün sayfalarda bu değerleri kontrol edebilecek olmasıdır bu js kodunun. 
 
 
