@@ -13,6 +13,7 @@ This is the division which you can go the favorited items list. There is an imag
 and the badges mission is showing quantity of favorited items list total. favBadges data-total property is defined for 
 saving data which came from model "listOfFavoritesTotal". At first there is no value between span tags butit will be 
 filled from javascript
+____________________________________________________
 ```Javascript
       $(document).on("ready",function () {
           var e = $('.favBadge').attr("data-total");
