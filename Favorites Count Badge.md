@@ -9,8 +9,8 @@
       </div>
 ```
 
-This is the division which you can go the favorited items list. There is an image exist for anchor. Also, it's badge exist
-and the badges mission is showing quantity of favorited items list total. favBadge's data-total property is defined for 
+This is the division which you can go the favorited items list. There is an image exist for anchor. Also, its badge exist
+and the badges mission is showing quantity of favorited items list total. favBadges data-total property is defined for 
 saving data which came from model "listOfFavoritesTotal". At first there is no value between span tags butit will be 
 filled from javascript
 ```Javascript
@@ -24,9 +24,9 @@ filled from javascript
           }
       });
 ```
-This code for works badge when every page loaded. Data-total's value copied e and this value putted between span tags. 
+This code for works badge when every page loaded. Data-totals value copied e and this value putted between span tags. 
  This model attribute comes a controller which works before every page loading. So, when we add an item to favorites, 
- this value can't change. We must to increase and decrase it when it required.
+ this value cant change. We must to increase and decrase it when it required.
 ```Javascript
 
       $(document).on("click","#addFav",function (e) {
