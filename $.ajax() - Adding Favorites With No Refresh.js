@@ -3,7 +3,7 @@
 $(document).on("click","#addFav",function (e) {
     var productCode = $(this).attr("data-productcode");
 ```    
-This data comes from controller and we put it in button's "data-productcode" attribute which is created by me 
+This data comes from controller and we put it in buttons "data-productcode" attribute which is created by me 
 
 ```Javascript    
     $.ajax({
