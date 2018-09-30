@@ -1,5 +1,5 @@
 
-## JSP PART 
+### JSP PART 
 ```JSP
       <div class="navbarFavBadge">
           <a href="/profile/favorites/listOfFavorites">
